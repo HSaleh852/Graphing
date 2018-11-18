@@ -20,63 +20,63 @@ namespace Graphing.Test
         {
             AdjacencyGraph g = new AdjacencyGraph();
 
-            g.AddVertex(new AdjacencyVertex());
+            g.AddVertex(new Vertex());
 
-            Assert.AreEqual(1, g.Vertices.Count);
+            Assert.AreEqual(1, g.Vertices.Count());
         }
 
         [TestMethod]
         public void RemoveVertexTest()
         {
             AdjacencyGraph g = new AdjacencyGraph();
-            AdjacencyVertex v = new AdjacencyVertex();
+            Vertex v = new Vertex();
 
             g.AddVertex(v);
 
             g.RemoveVertex(v);
 
-            Assert.AreEqual(0, g.Vertices.Count);
+            Assert.AreEqual(0, g.Vertices.Count());
         }
 
         [TestMethod]
         public void AddEdgeTest()
         {
             AdjacencyGraph g = new AdjacencyGraph();
-            AdjacencyVertex v1 = new AdjacencyVertex(), v2 = new AdjacencyVertex();
+            Vertex v1 = new Vertex(), v2 = new Vertex();
 
             g.AddVertex(v1);
             g.AddVertex(v2);
             g.AddEdge(v1, v2);
 
-            Assert.AreEqual(1, v1.AdjacentVertices.Count);
-            Assert.AreEqual(1, v2.AdjacentVertices.Count);
+            Assert.AreEqual(1, v1.AdjacentVertices.Count());
+            Assert.AreEqual(1, v2.AdjacentVertices.Count());
         }
 
         [TestMethod]
         public void RemoveEdgeTest()
         {
             AdjacencyGraph g = new AdjacencyGraph();
-            AdjacencyVertex v1 = new AdjacencyVertex(), v2 = new AdjacencyVertex();
+            Vertex v1 = new Vertex(), v2 = new Vertex();
 
             g.AddVertex(v1);
             g.AddVertex(v2);
             g.AddEdge(v1, v2);
             g.RemoveEdge(v1, v2);
 
-            Assert.AreEqual(0, v1.AdjacentVertices.Count);
-            Assert.AreEqual(0, v2.AdjacentVertices.Count);
+            Assert.AreEqual(0, v1.AdjacentVertices.Count());
+            Assert.AreEqual(0, v2.AdjacentVertices.Count());
         }
 
         [TestMethod]
         public void AddTest()
         {
             AdjacencyGraph g = new AdjacencyGraph();
-            AdjacencyVertex
-                v1 = new AdjacencyVertex(),
-                v2 = new AdjacencyVertex(),
-                v3 = new AdjacencyVertex(),
-                v4 = new AdjacencyVertex(),
-                v5 = new AdjacencyVertex();
+            Vertex
+                v1 = new Vertex(),
+                v2 = new Vertex(),
+                v3 = new Vertex(),
+                v4 = new Vertex(),
+                v5 = new Vertex();
 
             g.AddVertex(v1);
             g.AddVertex(v2);
@@ -88,22 +88,22 @@ namespace Graphing.Test
             g.AddEdge(v3, v1);
             g.AddEdge(v1, v4);
 
-            Assert.AreEqual(5, g.Vertices.Count);
-            Assert.AreEqual(3, v1.AdjacentVertices.Count);
-            Assert.AreEqual(2, v2.AdjacentVertices.Count);
-            Assert.AreEqual(2, v3.AdjacentVertices.Count);
-            Assert.AreEqual(1, v4.AdjacentVertices.Count);
-            Assert.AreEqual(0, v5.AdjacentVertices.Count);
+            Assert.AreEqual(5, g.Vertices.Count());
+            Assert.AreEqual(3, v1.AdjacentVertices.Count());
+            Assert.AreEqual(2, v2.AdjacentVertices.Count());
+            Assert.AreEqual(2, v3.AdjacentVertices.Count());
+            Assert.AreEqual(1, v4.AdjacentVertices.Count());
+            Assert.AreEqual(0, v5.AdjacentVertices.Count());
         }
 
         [TestMethod]
         public void AdjacentTest()
         {
             AdjacencyGraph g = new AdjacencyGraph();
-            AdjacencyVertex
-                v1 = new AdjacencyVertex(),
-                v2 = new AdjacencyVertex(),
-                v3 = new AdjacencyVertex();
+            Vertex
+                v1 = new Vertex(),
+                v2 = new Vertex(),
+                v3 = new Vertex();
 
             g.AddVertex(v1);
             g.AddVertex(v2);
@@ -119,11 +119,11 @@ namespace Graphing.Test
         public void NeighborsTest()
         {
             AdjacencyGraph g = new AdjacencyGraph();
-            AdjacencyVertex
-                v1 = new AdjacencyVertex(),
-                v2 = new AdjacencyVertex(),
-                v3 = new AdjacencyVertex(),
-                v4 = new AdjacencyVertex();
+            Vertex
+                v1 = new Vertex(),
+                v2 = new Vertex(),
+                v3 = new Vertex(),
+                v4 = new Vertex();
 
             g.AddVertex(v1);
             g.AddVertex(v2);

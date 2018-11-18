@@ -40,13 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extension\GraphExtensions.cs" />
     <Compile Include="Interface\IGraph.cs" />
+    <Compile Include="Interface\IRandomGraph.cs" />
     <Compile Include="Interface\IValueVertex.cs" />
     <Compile Include="Interface\IVertex.cs" />
-    <Compile Include="Interface\IWeightedGraph.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Type\AdjacencyGraph.cs" />
     <Compile Include="Type\AdjacencyVertex.cs" />
+    <Compile Include="Type\GraphObject.cs" />
+    <Compile Include="Type\RandomGraph.cs" />
+    <Compile Include="Type\Vertex.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="AdjacencyGraphTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
