@@ -24,7 +24,7 @@ namespace Graphing.Type
 
         public IVertex LinkTo(IVertex v)
         {
-            //test is it's there?
+            //test if it's there?
             adjacentVertices.Add(v);
 
             if (v is Vertex x)
@@ -36,7 +36,7 @@ namespace Graphing.Type
 
         public IVertex RemoveLink(IVertex v)
         {
-            //test is it's there?
+            //test if it's there?
             adjacentVertices.Remove(v);
 
             if (v is Vertex x)

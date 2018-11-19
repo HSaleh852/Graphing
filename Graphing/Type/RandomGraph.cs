@@ -12,7 +12,7 @@ namespace Graphing.Type
         public RandomGraph(int n, GraphPermissions permissions, GraphBehaviour behaviour) : base(permissions, behaviour)
         {
             while (n-- > 0)
-                AddVertex(new Vertex());//maybe abstract this away with a generic parameter
+                AddVertex(new ValueVertex<int>(n));//maybe abstract this away with a generic parameter
 
             r = new Random(DateTime.Now.Millisecond);
         }
@@ -36,13 +36,13 @@ namespace Graphing.Type
                     break;
                 default:
                     if (vertices.All(x => x.AdjacentVertices.Count() == vertices.Count - 1))
-                        return this;
+                        throw new Exception("Yeah");
+                    //return this;
 
                     v = RandomVertex(vertices.Where(x => x.AdjacentVertices.Count() < vertices.Count - 1).ToList());
                     v.LinkTo(RandomVertex(vertices.Except(v.AdjacentVertices.Concat(new List<IVertex>() { v })).ToList()));
                     break;
             }
-
             return this;
         }
 

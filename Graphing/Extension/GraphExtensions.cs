@@ -22,12 +22,11 @@ namespace Graphing.Extension
                 var current = q.Peek();
                 covered.Add(current);
                 foreach (var v in current.AdjacentVertices)
-                    if (!covered.Contains(v))
+                    if (!covered.Contains(v) && !q.Contains(v))
                         q.Enqueue(v);
 
                 q.Dequeue();
             }
-
             return covered.Count == graph.Vertices.Count();
         }
     }

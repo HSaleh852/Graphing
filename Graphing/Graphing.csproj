@@ -50,6 +50,7 @@
     <Compile Include="Type\AdjacencyVertex.cs" />
     <Compile Include="Type\GraphObject.cs" />
     <Compile Include="Type\RandomGraph.cs" />
+    <Compile Include="Type\ValueVertex.cs" />
     <Compile Include="Type\Vertex.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
